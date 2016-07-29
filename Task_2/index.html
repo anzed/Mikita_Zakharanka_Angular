@@ -27,8 +27,8 @@
 
         <div>Birthday</div>
             <input type="text" ng-model="birthday" placeholder="MM/DD/YYYY" birthday name="birthday" required/>
-            <span ng-show="form.birthday.$error.required">Date should take format MM/DD/YYYY and year between 1900 and 2010</span>
-            <span ng-show="form.birthday.$error.birthday">dgdgs</span>
+            <span ng-show="form.birthday.$error.required">Year should be between 1900 and 2010</span>
+            <span ng-show="form.birthday.$error.birthday">Date should take format MM/DD/YYYY</span>
 
         <p><input type="submit" ng-disabled="form.$invalid"></p>
     </form>
