@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <title>Task 2</title>
+
+    <script src="node_modules/lodash/lodash.min.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="howto.js"></script>
+
+</head>
+
+<body ng-app="task-2">
+
+    <form name="form" novalidate>
+        <div>Last Name</div>
+            <input type="text" ng-model="lastname" placeholder="Name" last-name name="lastname" required/>
+            <span ng-show="form.lastname.$error.required">Input should be more than 3 symbols, only first letter in uppercase of the word, only letters</span>
+
+        <div>Age</div>
+            <input type="text" ng-model="age" placeholder="18-65" age name="age" required/>
+            <span ng-show="form.age.$error.required">Age should be between 18 and 65</span>
+            <span ng-show="form.age.$error.age">Age should be between 18 and 65</span>
+
+
+        <div>Birthday</div>
+            <input type="text" ng-model="birthday" placeholder="MM/DD/YYYY" birthday name="birthday" required/>
+            <span ng-show="form.birthday.$error.required">Date should take format MM/DD/YYYY and year between 1900 and 2010</span>
+            <span ng-show="form.birthday.$error.birthday">dgdgs</span>
+
+        <p><input type="submit" ng-disabled="form.$invalid"></p>
+    </form>
+
+
+    </form>
+
+</body>
+
+</html>
